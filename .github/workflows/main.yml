@@ -55,7 +55,7 @@ jobs:
           cp -v data/*.dat assets/
           gomobile init
           go mod tidy
-          gomobile bind -v -androidapi 21 -trimpath -ldflags='-s -w -buildid=' ./libv2ray
+          gomobile bind -v -androidapi 21 -trimpath -ldflags='-s -w -buildid=' ./ ./phoenix
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
